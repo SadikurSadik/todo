@@ -1,0 +1,215 @@
+body, html {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #d3d3d3;
+    font-family: 'Oxygen', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*Home Page*/
+
+.signup {
+    background-color: #fff;
+    padding: 10px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+}
+.signup input[type=file] {
+    max-width: 100%;
+}
+.mid {
+    margin-top: 250px;
+    height: 60px;
+    width: 60px;
+    background: #fff;
+    border-radius: 50%;
+    padding-top: 20px;
+}
+.mid {
+    margin: 0 auto;
+    margin-top: 220px;
+}
+.mid p {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+.clear {
+    clear: none;
+}
+.br {
+    border: 1px solid #000;
+}
+.signin {
+    background-color: #fff;
+    padding: 10px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    margin-top: 100px;
+}
+.row.main {
+    padding: 50px 0;
+    margin: auto;
+}
+.heading {
+    font-size: 25px;
+    text-align: center;
+    color: #5f6468;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/*Task Page*/
+
+.row.task {
+    padding: 50px 0;
+    max-width: 800px;
+    margin: auto;
+}
+.createtask {
+    background-color: #fff;
+    padding: 20px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+}
+.createtask textarea {
+    max-width: 100%;
+    min-width: 100%;
+}
+.btn {
+    font-weight: bold;
+}
+/* Navigation */
+
+#myNavbar {
+    background: #242424;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 0;
+}
+#myNavbar .navbar-collapse.collapse a {
+    color: #cccccc;
+    text-align: center;
+    font-size: 12px;
+}
+
+#myNavbar .navbar-header .navbar-brand {
+    color: white;
+    font-size: 1.5em;
+}
+.active a {
+    background: #C36464 !important;
+    color: #ffffff !important;
+}
+#myNavbar .navbar-collapse.collapse a:hover {
+    color: #ffffff;
+    background: #C36464;
+}
+
+/*End Navigation Bar*/
+
+/*Breadcamp*/
+.breadcrumb{margin-top: 25px; background: #C36464; border: 0px solid rgba(245, 245, 245, 1); border-radius: 4px; display: block; float: left;}
+.breadcrumb li {font-size: 14px;}
+.breadcrumb a {color: rgba(66, 139, 202, 1);}
+.breadcrumb a:hover {color: rgba(42, 100, 150, 1);}
+.breadcrumb>.active {color: #fff;}
+.breadcrumb>li+li:before {color: rgba(204, 204, 204, 1); content: "\002F\00a0";}
+
+.header{
+  width: 100%;
+  background: #C36464;
+  padding: 10px 0;
+  margin-top: 0;
+}
+
+.header .profile{
+  float: right;
+  width: 300px;
+}
+.header .profile img{
+  height: 90px;
+  width: 80px;
+  -webkit-transition: all 0.5s ease;
+  float: left;
+  border-radius: 3px;
+}
+.header .profile img:hover{
+  transform: scale(1.1);
+  cursor:pointer;
+}
+
+.header .profile .name{
+  display: block;
+  text-decoration: none;
+  float: left;
+  font-size: 20px;
+  color: #fff;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.header .profile .designation{
+  display: block;
+  text-decoration: none;
+  float: left;
+  font-size: 20px;
+  color: #fff;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.header .profile .name:hover{
+  color: #CCC;
+}
+
+/*Footer*/
+.copyright{
+  background: #333333;
+  color: #DDDDDD;
+}
+
+.copyright a{
+  color: #969696;
+}
+
+.copyright a:hover{
+  text-decoration: none;
+  color: #CCC;
+}
+
+.mainContent{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.hscroll {
+    width: 100%;
+}
+.hscroll td,th{
+    text-align: center;
+    vertical-align: middle !important;
+}
+.hscroll tr:nth-child(even) {background-color: #f2f2f2;}
+.hscroll tbody tr:nth-child(odd) {background-color: green;}
+.error-label{
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 5px;
+  font-family: Arial, Helvetica;
+}

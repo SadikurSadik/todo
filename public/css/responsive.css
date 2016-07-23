@@ -1,0 +1,43 @@
+@media (max-width: 767px) {
+
+  .signup{
+    max-width: 350px;
+  }
+  .signin{
+    margin-top: 0;
+  }
+  .mid{
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .row.main,.row.task{
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .hscroll {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+  }
+
+}
+@media (max-width: 331px) {
+  .row.main{
+    max-width: 280px;
+    margin: 0px auto;
+  }
+  .createtask{
+    padding: 20px 10px;
+  }
+}
+
+/*Tab Devices*/
+@media only screen and (min-width:768px) and (max-width: 991px)  {
+  .row.main{
+    max-width: 755px;
+    margin: auto;
+  }
+}

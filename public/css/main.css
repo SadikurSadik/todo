@@ -1,0 +1,96 @@
+body, html {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-color: #d3d3d3;
+    font-family: 'Oxygen', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*Home Page*/
+
+.signup {
+    background-color: #fff;
+    padding: 10px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+}
+.signup input[type=file] {
+    max-width: 220px;
+}
+.mid {
+    margin-top: 250px;
+    height: 60px;
+    width: 60px;
+    background: #fff;
+    border-radius: 50%;
+    padding-top: 20px;
+}
+.mid {
+    margin: 0 auto;
+    margin-top: 220px;
+}
+.mid p {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+.clear {
+    clear: none;
+}
+.br {
+    border: 1px solid #000;
+}
+.signin {
+    background-color: #fff;
+    padding: 10px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    margin-top: 100px;
+}
+.row.main {
+    padding: 50px 0;
+    margin: auto;
+}
+.heading {
+    font-size: 25px;
+    text-align: center;
+    color: #5f6468;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+/*Task Page*/
+
+.row.task {
+    padding: 50px 0;
+    max-width: 800px;
+    margin: auto;
+}
+.createtask {
+    background-color: #fff;
+    padding: 20px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+}
+.createtask textarea {
+    max-width: 100%;
+    min-width: 100%;
+}
+.btn {
+    font-weight: bold;
+}

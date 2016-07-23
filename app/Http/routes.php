@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*Web Related Route*/
+Route::get('/',['as'=>'home', 'uses'=>'PagesController@home']);
+Route::get('/about',['as'=>'about', 'uses'=>'PagesController@about']);
+Route::get('/contact',['as'=>'contact', 'uses'=>'PagesController@contact']);
+Route::get('/login',['as'=>'login', 'uses'=>'PagesController@login']);
+Route::post('/post-login', ['as'=>'post-login', 'uses'=>'PagesController@postLogin']);
+Route::post('/member/store',['as'=>'register-memeber','uses'=>'MembersController@store']);
+Route::post('/member/login', ['as'=>'member-login', 'uses'=>'MembersController@login']);
+/*End of Web Related Route*/
