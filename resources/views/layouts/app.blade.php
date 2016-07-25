@@ -4,7 +4,7 @@
 
 <div class="container-fluid mainContent">
 
-	@hasSection('pageTitle'))
+	@hasSection('pageTitle')
 		<h3 class="heading">@yield('pageTitle')</h3>
 	@endif
       

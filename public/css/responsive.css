@@ -15,6 +15,7 @@
   .row.main,.row.task{
     max-width: 350px;
     margin: 0 auto;
+    padding: 20px 0;
   }
 
   .hscroll {
@@ -25,9 +26,10 @@
 
 }
 @media (max-width: 331px) {
-  .row.main{
+  .row.main,.row.task{
     max-width: 280px;
     margin: 0px auto;
+    padding: 20px 0;
   }
   .createtask{
     padding: 20px 10px;

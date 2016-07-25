@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 use App\Http\Requests;
 use App\Member;
 use App\Task;
@@ -22,7 +22,6 @@ class MembersController extends Controller
             'email'=>'required|email|unique:members',
             'password'=>'required|min:3',
             'photo'=>'image|mimes:jpeg,jpg,png,gif'
-
         ]);
         $member = new Member();
         $member->status_id= 1;
@@ -70,6 +69,35 @@ class MembersController extends Controller
         //session()->forget('action_message');
         Auth::logout();
         return redirect()->Route('home');
+    }
+
+    // Get Profile page
+    public function profile(){
+        return view('members.profile');
+    }
+
+    // Update Member Profile
+    public function updateProfile(Request $request){
+        
+        $this->validate($request,[
+            'name'=>'required',
+            'email'=>'required|email',
+            'photo'=>'image|mimes:jpeg,jpg,png,gif',
+            'designation'=>'required'
+        ]);
+
+        $member = Auth::user();
+        if($request->hasFile('photo')){
+            $pho = $request->file('photo');
+            $member->photo = $pho->getClientOriginalName();
+            $pho->move('img',$pho->getClientOriginalName());
+        }
+
+        DB::table('members')
+            ->where('id', $member->id)
+            ->update(['current_designation' => $request->designation, 'contact' => $request->contact, 'photo' => $member->photo]);
+        session()->flash('action_message', 'Profile updated successfully!!');
+        return redirect()->back();
     }
 
 }

@@ -26,8 +26,10 @@ Route::group(['middleware'=>['auth']], function () {
 	Route::get('/member/dashboard',['as'=>'dashboard','uses'=>'MembersController@index']);
 	Route::get('/logout',['as'=>'logout','uses'=>'MembersController@logout']);
 	Route::get('/client',['as'=>'client','uses'=>'ClientsController@index']);
+	Route::get('/profile',['as'=>'profile','uses'=>'MembersController@profile']);
 	Route::post('/client/store',['as'=>'save-client','uses'=>'ClientsController@store']);
 	Route::get('/project',['as'=>'project','uses'=>'ProjectsController@index']);
 	Route::post('/project/store',['as'=>'save-project','uses'=>'ProjectsController@store']);
+	Route::post('/profile/update',['as'=>'update-profile','uses'=>'MembersController@updateProfile']);
 });
 /*End of App Related Route*/
