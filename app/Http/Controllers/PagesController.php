@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Task;
+use Auth;
 use App\Http\Requests;
 
 class PagesController extends Controller
@@ -25,6 +26,9 @@ class PagesController extends Controller
 
     public function login()
     {
+      if(Auth::check()){
+        return redirect()->route('dashboard');
+      }
       return view('pages.login');
     }
 

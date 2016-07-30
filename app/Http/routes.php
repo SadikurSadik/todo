@@ -27,7 +27,9 @@ Route::group(['middleware'=>['auth']], function () {
 	Route::get('/logout',['as'=>'logout','uses'=>'MembersController@logout']);
 	Route::get('/client',['as'=>'client','uses'=>'ClientsController@index']);
 	Route::get('/profile',['as'=>'profile','uses'=>'MembersController@profile']);
+	Route::get('/new-task',['as'=>'new-task','uses'=>'TasksController@newTask']);
 	Route::post('/client/store',['as'=>'save-client','uses'=>'ClientsController@store']);
+	Route::post('/task/store',['as'=>'save-task','uses'=>'TasksController@store']);
 	Route::get('/project',['as'=>'project','uses'=>'ProjectsController@index']);
 	Route::post('/project/store',['as'=>'save-project','uses'=>'ProjectsController@store']);
 	Route::post('/profile/update',['as'=>'update-profile','uses'=>'MembersController@updateProfile']);

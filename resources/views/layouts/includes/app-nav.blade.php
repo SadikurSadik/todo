@@ -14,7 +14,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="{{ Route::currentRouteName() == 'client' ? 'active' : '' }}"><a href="{{ route('client') }}">New Client</a></li>
                 <li class="{{ Route::currentRouteName() == 'project' ? 'active' : '' }}"><a href="{{ route('project') }}">New Project</a></li>
-                <li class=""><a href="">Newtask</a></li>
+                <li class="{{ Route::currentRouteName() == 'new-task' ? 'active' : '' }}"><a href="{{ route('new-task') }}">New Task</a></li>
                 <li class=""><a href="">Archieve</a></li>
                 <li class=""><a href="{{ route('logout') }}">Logout</a></li>
               </ul>

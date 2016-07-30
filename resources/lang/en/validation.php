@@ -94,8 +94,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'project_id' => [
+            'exists' => 'Please Select a Project.',
         ],
     ],
 

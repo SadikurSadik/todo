@@ -21,12 +21,12 @@
     var date = new Date();
     date.setDate(date.getDate());
 
-    $('#taskEstStartTime').datepicker({
+    $('#est_start_time').datepicker({
         startDate: date,
         format: "yyyy-mm-dd"
     });
 
-    $('#taskEstEndTime').datepicker({
+    $('#est_end_time').datepicker({
         startDate: date,
         format: "yyyy-mm-dd"
     });
