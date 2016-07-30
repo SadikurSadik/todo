@@ -33,5 +33,6 @@ Route::group(['middleware'=>['auth']], function () {
 	Route::get('/project',['as'=>'project','uses'=>'ProjectsController@index']);
 	Route::post('/project/store',['as'=>'save-project','uses'=>'ProjectsController@store']);
 	Route::post('/profile/update',['as'=>'update-profile','uses'=>'MembersController@updateProfile']);
+	Route::post('/update-task-status',['as'=>'update-task-status', 'uses'=>'TasksController@updateTask']);
 });
 /*End of App Related Route*/

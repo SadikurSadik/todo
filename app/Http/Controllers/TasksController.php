@@ -36,4 +36,22 @@ class TasksController extends Controller
         session()->flash('action_message', 'Task created Successfully!!');
         return back();
     }
+
+    // Update Task Status
+    public function updateTask(Request $request){
+        $id = $request['id'];
+        $updated_id = $request['updated_id'];
+
+        DB::table('tasks')->where('id', $id)->update(['task_status_id' => $updated_id]);
+        $taskStatus = DB::table('task_statuses')->where('id', $updated_id)->first();
+        $msg = "Task has been ".$taskStatus->value." successfully.";
+
+        $messageType = 'alert-success';
+        if($taskStatus->value == 'Cancelled') $messageType = 'alert-danger';
+        elseif($taskStatus->value == 'Paused') $messageType = 'alert-warning';
+        session()->flash('action_message', $msg);
+        session()->flash('class', $messageType);
+        
+        return redirect()->back();
+    }
 }

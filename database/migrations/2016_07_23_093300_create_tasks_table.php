@@ -24,7 +24,7 @@ class CreateTasksTable extends Migration
             $table->timestamp('act_start_time')->nullable();
             $table->timestamp('act_end_time')->nullable();
             $table->timestamps();
-            $table->integer('task_status_id')->unsigned()->index();
+            $table->integer('task_status_id')->unsigned()->index()->default(1);
 
             //unique(['name','member_id','project_id']);
             $table->foreign('member_id')->references('id')->on('members')
@@ -33,7 +33,9 @@ class CreateTasksTable extends Migration
             $table->foreign('project_id')->references('id')->on('projects')
                     ->onDelete('restrict')
                     ->onUpdate('cascade');
-
+            $table->foreign('task_status_id')->references('id')->on('task_statuses')
+                    ->onDelete('restrict')
+                    ->onUpdate('cascade');
         });
     }
 

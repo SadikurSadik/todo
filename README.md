@@ -36,9 +36,9 @@ $ cp .env.example .env
 
 Edit `.env` file with with your database credential
 
-Now create database tables by running this command-
+Now create database tables and seed some data by running this command-
 ```
-php artisan migrate
+php artisan migrate --seed
 ```
 
 Generate a application key

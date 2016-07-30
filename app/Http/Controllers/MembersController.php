@@ -12,7 +12,7 @@ use Auth;
 class MembersController extends Controller
 {
     public function index() {
-        $tasks = Task::all()->where('member_id', Auth::user()->id);
+        $tasks = Task::all()->where('member_id', Auth::user()->id)->whereIn('task_status_id', [1, 2, 4]);
         return view('members.index', compact('tasks'));
     }
 
@@ -38,12 +38,8 @@ class MembersController extends Controller
             $member->photo = 'profile-pic.png';
         }
 
-        //dd($member);
-
-
         $member->save();
         session()->flash('action_message', 'Register successfully done!!');
-        // Auth::login($member);
 
         return redirect()->Route('dashboard');
     }
