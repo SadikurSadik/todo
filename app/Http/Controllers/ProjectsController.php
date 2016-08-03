@@ -6,13 +6,14 @@ use Illuminate\Http\Request;
 use App\Client;
 use App\Project;
 use Auth;
+use DB;
 use App\Http\Requests;
 
 class ProjectsController extends Controller
 {
     public function index()
     {
-    	$clients = Client::all()->where('member_id', Auth::user()->id);
+    	$clients = DB::table('clients')->where('member_id', Auth::user()->id)->get();
         return view('members.project', compact('clients'));
     }
 

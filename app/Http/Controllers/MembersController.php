@@ -12,7 +12,7 @@ use Auth;
 class MembersController extends Controller
 {
     public function index() {
-        $tasks = Task::all()->where('member_id', Auth::user()->id)->whereIn('task_status_id', [1, 2, 4]);
+        $tasks = DB::table('tasks')->where('member_id', Auth::user()->id)->whereIn('task_status_id', [1, 2, 4])->get();
         return view('members.index', compact('tasks'));
     }
 
@@ -39,7 +39,9 @@ class MembersController extends Controller
         }
 
         $member->save();
-        session()->flash('action_message', 'Register successfully done!!');
+        Auth::login($member);
+        $message = '<strong>Welcome!</strong> Registration successfully done.';
+        session()->flash('action_message', $message);
 
         return redirect()->Route('dashboard');
     }

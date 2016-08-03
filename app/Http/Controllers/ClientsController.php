@@ -16,7 +16,7 @@ class ClientsController extends Controller
     /*Save Client*/
     public function store(Request $request){
     	$this->validate($request,[
-    		'name'=>'required|unique:clients|min:3',
+    		'name'=>'required|min:3|unique:clients,name,NULL,id,member_id,' . Auth::user()->id
 		]);
     	$client = new Client();
     	$client->name = $request['name'];

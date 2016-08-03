@@ -19,6 +19,7 @@ class CreateClientsTable extends Migration
             $table->string('contact',100)->nullable();
             $table->timestamps();
 
+            $table->unique(['member_id', 'name']);
             $table->foreign('member_id')->references('id')->on('members')
                   ->onDelete('restrict')->onUpdate('cascade');
         });

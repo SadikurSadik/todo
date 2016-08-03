@@ -2,15 +2,17 @@
 
 @section('title','Dashboard')
 
-@section('pageTitle', 'Pending Task List')
-
 @section('content')
+
   @if(Session::has('action_message'))
-    <div class="alert {{ Session::get('class') }}">
-      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-      {{ Session::get('action_message') }}
-    </div>
-@endif
+      <div class="alert {{ Session::has('class') ? Session::get('class') : 'alert-success' }}">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        {!! Session::get('action_message') !!}
+      </div>
+  @endif
+
+  <h3 class="heading">Pending Task List</h3>
+
 	<table id="example" class="table table-bordered hscroll" cellspacing="0" >
         <thead>
             <tr>
